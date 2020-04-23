@@ -29,8 +29,23 @@ SELECT name, population FROM world --returns view with name and pop columns
 
 
 
+--Problem 3: Just the right size--
+
+--Which countries are not too small and not too big? BETWEEN allows range checking (range specified is inclusive of boundary values). The example below shows countries with an area of 250,000-300,000 sq. km. Modify it to show the country and the area for countries with an area between 200,000 and 250,000. 
+
+SELECT name, area FROM world
+  WHERE area BETWEEN 200000 and 250000 --CURSOR_CLOSE_ON_COMMIT
 
 
+-- 
+
+-- SELECT basics Quiz --
+--# 3 Select the code which shows the countries that end in A or L 
+-- Wrong: SELECT name FROM world
+  --WHERE name like '%a' OR '1%'
+
+--Correct: SELECT name FROM world
+    --WHERE name LIKE '%a' OR name LIKE '%1'
 
 
 
