@@ -21,7 +21,15 @@ SELECT name FROM world
 
 
 --Problem 3: Per capita GDP 
+SELECT name, gdp/population FROM world
+  WHERE population > 200000000 
+--correct 
 
+--Problem 4: South America in millions 
+--Show the name and population in millions for the countries of the continent 'South America'. Divide the population by 1000000 to get population in millions. 
+
+SELECT name, population/1000000 FROM world
+  WHERE continent = 'South America' --CORRECT 
 
 
 
